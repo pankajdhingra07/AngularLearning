@@ -1,0 +1,64 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h3>
+    Welcome to {{title}}  !
+  </h3>
+  <img width="300" src="ata:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxOS4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiDQoJIHZpZXdCb3g9IjAgMCAyNTAgMjUwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNTAgMjUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDojREQwMDMxO30NCgkuc3Qxe2ZpbGw6I0MzMDAyRjt9DQoJLnN0MntmaWxsOiNGRkZGRkY7fQ0KPC9zdHlsZT4NCjxnPg0KCTxwb2x5Z29uIGNsYXNzPSJzdDAiIHBvaW50cz0iMTI1LDMwIDEyNSwzMCAxMjUsMzAgMzEuOSw2My4yIDQ2LjEsMTg2LjMgMTI1LDIzMCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAJIi8+DQoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIxMjUsMzAgMTI1LDUyLjIgMTI1LDUyLjEgMTI1LDE1My40IDEyNSwxNTMuNCAxMjUsMjMwIDEyNSwyMzAgMjAzLjksMTg2LjMgMjE4LjEsNjMuMiAxMjUsMzAgCSIvPg0KCTxwYXRoIGNsYXNzPSJzdDIiIGQ9Ik0xMjUsNTIuMUw2Ni44LDE4Mi42aDBoMjEuN2gwbDExLjctMjkuMmg0OS40bDExLjcsMjkuMmgwaDIxLjdoMEwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMUwxMjUsNTIuMQ0KCQlMMTI1LDUyLjF6IE0xNDIsMTM1LjRIMTA4bDE3LTQwLjlMMTQyLDEzNS40eiIvPg0KPC9nPg0KPC9zdmc+DQo=">
+</div>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  <div style="display: inline-block;width:33%">  
+        <div style="display: block; padding-bottom: 30px">
+        <label name="lblFirstName" id="lblFirstName">First Name</label>
+        <input ngModel  #FirstName="ngModel" name="txtFirstName" id="txtFirstName" style="margin-left: 30px" value='{{ userInfo.FirstName }}' />
+      </div>
+      <div style="display: block; padding-bottom: 30px">
+        <label name="lblMiddleName" id="lblMiddleName">Middle Name</label>
+        <input ngModel  #MiddleName="ngModel" name="txtMiddleName" id="txtMiddleName"  style="margin-left: 10px" value='{{ userInfo.MiddleName }}'/>
+        </div>
+      <div style="display: block; padding-bottom: 30px">
+        <label name="lblLastName" id="lblLastName">Last Name</label>
+        <input ngModel  #LastName="ngModel" name="txtLastName" id="txtLastName"  style="margin-left: 30px" value='{{ userInfo.LastName }}'/>
+      </div>
+  </div>
+
+  <div style="display: inline-block ;width:33%">  
+  <div style="display: block; padding-bottom: 30px">
+  <label name="lbljobProfile" id="lbljobProfile">Job Profile</label>
+  <input  ngModel  #JobProfile="ngModel"  name="txtjobProfile" id="txtjobProfile" style="margin-left: 30px" value='{{ userInfo.JobProfile }}' />
+ </div>
+ <div style="display: block; padding-bottom: 30px">
+  <label name="lbljobTenure" id="lbljobTenure">Job Tenure</label>
+  <input  ngModel  #JobTenure="ngModel"  name="txtjobTenure" id="txtjobTenure"  style="margin-left: 30px" value='{{ userInfo.JobTenure }}'/>
+   </div>
+
+ <div style="display: block; padding-bottom: 30px">
+  <label name="lbljobAddress" id="lbljobAddress">Job Address</label>
+  <input  ngModel  #JobAddress="ngModel" name="txtjobAddress" id="txtjobAddress" style="margin-left: 22px" value='{{ userInfo.JobAddress }}'/>
+ </div>
+</div>
+
+<div style="display: inline-block ;width:33%">  
+  <div style="display: block; padding-bottom: 30px">
+  <label name="lblApartmentName" id="lblApartmentName">Apartment Name</label>
+  <input   ngModel  #ApartmentName="ngModel" name="txtApartmentName" id="txtApartmentName" style="margin-left: 30px" value='{{ userInfo.ApartmentName }}' />
+ </div>
+ <div style="display: block; padding-bottom: 30px">
+  <label name="lblFloorNo" id="lblFloorNo">Floor No</label>
+  <input  ngModel  #FloorNo="ngModel" name="txtFloorNo" id="txtFloorNo"  style="margin-left: 85px" value='{{ userInfo.FloorNo }}'/>
+   </div>
+
+ <div style="display: block; padding-bottom: 30px">
+  <label name="lblApartmentAddress" id="lblApartmentAddress">Apartment Address</label>
+  <input   ngModel  #ApartmentAddress="ngModel" name="txtApartmentAddress" id="txtApartmentAddress" style="margin-left: 20px" value='{{ userInfo.ApartmentAddress }}'/>
+ </div>
+  </div>
+
+
+      <button>Submit</button>
+</form>
+<!-- <div>
+   </div>
+<div>
+  <input type="button" id="btnSubmit" name="Submit" title="Submit" value="Submit" (click)="save(userInfo)" >
+  </div>
+ -->
